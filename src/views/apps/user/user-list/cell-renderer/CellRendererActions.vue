@@ -10,7 +10,7 @@
         name: 'CellRendererActions',
         methods: {
           editRecord() {
-            this.$router.push("/apps/user/user-edit/" + this.params.data.id).catch(() => {})
+            this.$router.push("/apps/user/user-edit/" + 1).catch(() => {})
 
             /*
               Below line will be for actual product

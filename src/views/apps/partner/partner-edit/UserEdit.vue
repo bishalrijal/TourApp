@@ -27,16 +27,7 @@
               <user-edit-tab-account class="mt-4" :data="user_data" />
             </div>
           </vs-tab>
-          <vs-tab label="Information" icon-pack="feather" icon="icon-info">
-            <div class="tab-text">
-              <user-edit-tab-information class="mt-4" :data="user_data" />
-            </div>
-          </vs-tab>
-          <vs-tab label="Social" icon-pack="feather" icon="icon-share-2">
-            <div class="tab-text">
-              <user-edit-tab-social class="mt-4" :data="user_data" />
-            </div>
-          </vs-tab>
+          
         </vs-tabs>
 
       </div>
@@ -80,7 +71,10 @@ export default {
   methods: {
     fetch_user_data(userId) {
       this.$store.dispatch("userManagement/fetchUser", userId)
-        .then(res => { this.user_data = res.data })
+        .then(res => { this.user_data = res.data
+        console.log(this.user_data) }
+        
+        )
         .catch(err => {
           if(err.response.status === 404) {
             this.user_not_found = true

@@ -6,11 +6,12 @@
 </template>
 
 <script>
+    import axios from "@/axios";
     export default {
         name: 'CellRendererActions',
         methods: {
           editRecord() {
-            this.$router.push("/apps/bank/bank-edit/" + this.params.data.id).catch(() => {})
+            this.$router.push("/apps/bank/bank-edit/" + 1).catch(() => {})
 
             /*
               Below line will be for actual product
@@ -30,8 +31,12 @@
             })
           },
           deleteRecord() {
+            console.log(this.params)
             /* Below two lines are just for demo purpose */
             this.showDeleteSuccess()
+
+            axios.delete(`/api/bankbranch/2`)
+            
 
             /* UnComment below lines for enabling true flow if deleting user */
             // this.$store.dispatch("userManagement/removeRecord", this.params.data.id)

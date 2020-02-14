@@ -6,20 +6,20 @@
       <form data-vv-scope="step-1">
       <div class="vx-row">
         <div class="vx-col md:w-1/2 w-full mt-5">
-          <vs-input label="Partner Name" v-model="agencyName" class="w-full" name="package_title" v-validate="'required|alpha_spaces'" />
-          <span class="text-danger">Title is Required is required</span>
+          <vs-input label="User id" v-model="userId" class="w-full" name="user_id" v-validate="'required|integer'" />
+          <span class="text-danger">User id is Required is required</span>
         </div>
         <div class="vx-col md:w-1/2 w-full mt-5">
-          <vs-input label="Partner Code"  v-model="partnerCode" class="w-full" name="partner_code" v-validate="'required|alpha_spaces'" />
-          <span class="text-danger">Partner Code is required</span>
+          <vs-input label="Agency Name" v-model="agencyName" class="w-full" name="agency_name" v-validate="'required|alpha_spaces'" />
+          <span class="text-danger">Agency is Required is required</span>
         </div>
         <div class="vx-col md:w-1/2 w-full mt-5">
-          <vs-input type="number" label="Available quantity"  v-model="total_availability_quantity" class="w-full" name="total_availability_quantity" v-validate="'required|integer'" />
-          <span class="text-danger">Quantity is required</span>
+          <vs-input label="Owner Name"  v-model="ownerName" class="w-full" name="owner_name" v-validate="'required|alpha_spaces'" />
+          <span class="text-danger">Owner Name is required</span>
         </div>
         <div class="vx-col md:w-1/2 w-full mt-5">
-          <vs-input type = "number" v-model="validity_day" class="w-full select-large" label="Validity Days" name = 'validity_day' v-validate ="'required|numeric'" />
-            <!-- <vs-select-item :key="index" :value="item.value" :text="item.text" v-for="(item,index) in cityOptions" class="w-full" /> -->
+          <vs-input  label="Office Address"  v-model="officeAddress" class="w-full" name="office_address" v-validate="'required|integer'" />
+          <span class="text-danger">Please enter the office address</span>
         </div>
       </div>
       </form>
@@ -30,14 +30,13 @@
       <form data-vv-scope="step-2">
       <div class="vx-row">
         <div class="vx-col md:w-1/2 w-full">
-          <vs-input type = 'number' label="Adult Price" v-model="adultPrice" class="w-full mt-4" name="adult_price" v-validate="'required|numeric'" />
+          <vs-input label="Registered Name" v-model="registeredName" class="w-full mt-4" name="regiteredName" v-validate="'required|alpha_spaces'" />
           <span class="text-danger"></span>
-
-          <vs-input type= "number" label="Child Price"  v-model="childPrice" class="w-full mt-4" name="child_price" v-validate="'required|numeric'" />
+          <vs-input  label="Registered Address Pin"  v-model="registeredAddressPin" class="w-full mt-4" name="register_address_pin" v-validate="'required|alpha_space'" />
           <span class="text-danger"></span>
         </div>
         <div class="vx-col md:w-1/2 w-full">
-          <vs-textarea v-model="textarea" label="Short discription" class="md:mt-10 mt-6 mb-0" rows="5" />
+          <vs-input  label="Registered Address"  v-model="registeredAddress" class="w-full mt-4" name="register_address" v-validate="'required|alpha_space'" />
         </div>
       </div>
       </form>
@@ -125,13 +124,14 @@ Validator.localize('en', dict);
 export default {
   data() {
     return {
-      packageTitle: "",
-      partnerCode: "",
-      total_availability_quantity: "",
-      validity_day: 1,
-      adultPrice: "",
-      childPrice: "",
-      textarea: "",
+      userId:"",
+      agencyName:"",
+      ownerName: "",
+      officeAddress:"",
+      registeredName:"",
+      registeredAddressPin:"",
+      registeredAddress: "",
+
       includes: "",
       excludes: "",
       status: "plannning",

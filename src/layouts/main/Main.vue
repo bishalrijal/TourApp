@@ -219,9 +219,17 @@ export default {
     },
     toggleHideScrollToTop(val) {
       this.hideScrollToTop = val
+    },
+    IsLoggedIn(){
+      if(! this.$store.state.auth.isUserLoggedIn()){
+        this.$router.push('/login')
+      }
     }
   },
   created() {
+    // check user login 
+    this.IsLoggedIn()
+    
     const color = this.navbarColor == "#fff" && this.isThemeDark ? "#10163a" : this.navbarColor
     this.updateNavbarColor(color)
     this.setNavMenuVisibility(this.$store.state.mainLayoutType)

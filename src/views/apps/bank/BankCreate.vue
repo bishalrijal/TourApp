@@ -37,13 +37,15 @@ export default {
     }
   },
   methods: {
-    submit(){
+    async submit(){
       const data = {
         ifsc: this.ifsc_code,
         bank_name: this.bank_name,
         branch_name: this.branch_name
       }
-      axios.post('/api/bankbranch',data)
+      await axios.post('/api/bankbranch',data)
+      this.$router.push('/apps/bank/bank-list')
+
     }
   }
   

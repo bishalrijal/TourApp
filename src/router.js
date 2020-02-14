@@ -309,7 +309,10 @@ const router = new Router({
                 {
                     path: '/pages/error-404',
                     name: 'page-error-404',
-                    component: () => import('@/views/pages/Error404.vue')
+                    component: () => import('@/views/pages/Error404.vue'),
+                    meta: {
+                        rule: 'editor'
+                    }
                 },
             ]
         },

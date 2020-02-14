@@ -80,7 +80,7 @@ export default {
   methods: {
     fetch_user_data(userId) {
       this.$store.dispatch("userManagement/fetchUser", userId)
-        .then(res => { this.user_data = res.data })
+        .then(res => { this.user_data = res.data['user details'] })
         .catch(err => {
           if(err.response.status === 404) {
             this.user_not_found = true
