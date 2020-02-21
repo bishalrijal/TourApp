@@ -229,7 +229,6 @@ export default {
   created() {
     // check user login 
     this.IsLoggedIn()
-    
     const color = this.navbarColor == "#fff" && this.isThemeDark ? "#10163a" : this.navbarColor
     this.updateNavbarColor(color)
     this.setNavMenuVisibility(this.$store.state.mainLayoutType)

@@ -11,7 +11,7 @@
         name: 'CellRendererActions',
         methods: {
           editRecord() {
-            this.$router.push("/apps/bank/bank-edit/" + 1).catch(() => {})
+            this.$router.push("/apps/bank/bank-edit/" + this.params.data.id).catch(() => {})
 
             /*
               Below line will be for actual product
@@ -35,7 +35,7 @@
             /* Below two lines are just for demo purpose */
             this.showDeleteSuccess()
 
-            axios.delete(`/api/bankbranch/2`)
+            axios.delete(`/api/bankbranch/` + this.params.data.id)
             
 
             /* UnComment below lines for enabling true flow if deleting user */

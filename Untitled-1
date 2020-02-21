@@ -1,0 +1,14 @@
+`id`
+`user_id`
+`agency_name`
+`owner_name`
+`registered_name`
+`registered_address`
+`registered_address_pin`
+`office_address`
+`office_address_pin`
+`agency_logo`
+`trade_license_photo`
+`bank_account_no`
+`branch_id`
+`cancellation_policy`

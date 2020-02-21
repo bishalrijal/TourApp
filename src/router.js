@@ -165,11 +165,10 @@ const router = new Router({
                     meta: {
                         breadcrumb: [
                             { title: 'Home', url: '/' },
-                            { title: 'App' },
-                            { title: 'Package' },
+                            { title: 'Bank' },
                             { title: 'Create', active: true },
                         ],
-                        pageTitle: 'Packages',
+                        pageTitle: 'Bank',
                         rule: 'admin'
                     },
                 },
@@ -177,14 +176,14 @@ const router = new Router({
                 {
                     path: '/apps/bank/bank-list',
                     name: 'app-bank-list',
-                    component: () => import('@/views/apps/bank/bank-list/UserList.vue'),
+                    component: () => import('@/views/apps/bank/bank-list/BankList.vue'),
                     meta: {
                         breadcrumb: [
                             { title: 'Home', url: '/' },
-                            { title: 'User' },
+                            { title: 'Bank' },
                             { title: 'List', active: true },
                         ],
-                        pageTitle: 'User List',
+                        pageTitle: 'Bank List',
                         rule: 'admin'
                     },
                 },
@@ -195,10 +194,10 @@ const router = new Router({
                     meta: {
                         breadcrumb: [
                             { title: 'Home', url: '/' },
-                            { title: 'User' },
+                            { title: 'Bank' },
                             { title: 'View', active: true },
                         ],
-                        pageTitle: 'User View',
+                        pageTitle: 'Bank View',
                         rule: 'editor'
                     },
                 },
@@ -209,10 +208,10 @@ const router = new Router({
                     meta: {
                         breadcrumb: [
                             { title: 'Home', url: '/' },
-                            { title: 'User' },
+                            { title: 'Bank' },
                             { title: 'Edit', active: true },
                         ],
-                        pageTitle: 'User Edit',
+                        pageTitle: 'Bank Edit',
                         rule: 'editor'
                     },
                 },

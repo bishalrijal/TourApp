@@ -105,18 +105,6 @@ export default [
                     slug: "app-bank-list",
                     i18n: "List",
                   },
-                  {
-                    url: '/apps/bank/bank-view/1',
-                    name: "View",
-                    slug: "app-bank-view",
-                    i18n: "View",
-                  },
-                  {
-                    url: '/apps/bank/bank-edit/1',
-                    name: "Edit",
-                    slug: "app-bank-edit",
-                    i18n: "Edit",
-                  },
                   ///bank
 
           
@@ -146,18 +134,6 @@ export default [
             name: "List",
             slug: "packages-tour-list",
             i18n: "List",
-          },
-          {
-            url: '/packages/tour/tour-view/1',
-            name: "View",
-            slug: "package-tour-view",
-            i18n: "View",
-          },
-          {
-            url: '/packages/tour/tour-edit/1',
-            name: "Edit",
-            slug: "package-tour-edit",
-            i18n: "Edit",
           },
         ]
       },
